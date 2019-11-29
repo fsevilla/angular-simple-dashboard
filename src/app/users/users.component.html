@@ -1,0 +1,9 @@
+<form (submit)="addUser()">
+    <input type="text" name="userName" [(ngModel)]="userName">
+    <button>Add user</button>
+</form>
+
+
+<ul>
+    <li *ngFor="let user of usersList">{{user.name}}</li>
+</ul>
