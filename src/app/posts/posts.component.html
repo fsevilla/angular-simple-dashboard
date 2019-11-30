@@ -11,9 +11,10 @@
         <tr *ngFor="let post of posts">
             <td>{{post.title}}</td>
             <td>{{post.userId}}</td>
-            <td><a [routerLink]="post.id">
-                    <fa-icon [icon]="editIcon"></fa-icon>
-                    Ver</a></td>
+            <td>
+                <a [routerLink]="post.id"><fa-icon [icon]="editIcon"></fa-icon></a>
+                <a (click)="deleteRow(post.id)"><fa-icon [icon]="deleteIcon"></fa-icon></a>
+            </td>
         </tr>
     </table>
 </div>

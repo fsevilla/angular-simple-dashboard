@@ -22,7 +22,7 @@ export class PostDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.postService.getPostDetails(this.postId)
+    this.postService.get(this.postId)
       .then(response => {
         this.post = response;
       })
