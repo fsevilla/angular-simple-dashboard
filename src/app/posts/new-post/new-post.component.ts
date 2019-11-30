@@ -37,7 +37,7 @@ export class NewPostComponent implements OnInit {
       });
   }
 
-  createPost(e) {
+  createPost() {
     console.log('voy a crear el post', this.data);
     this.postService.create(this.data)
       .then(response => {

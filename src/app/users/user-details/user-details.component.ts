@@ -10,7 +10,9 @@ import { UserService } from '../user.service';
 export class UserDetailsComponent implements OnInit {
 
   userId;
-  user = {};
+  user:any = {
+    name: ''
+  };
   isLoading = false;
 
   constructor(
