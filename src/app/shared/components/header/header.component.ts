@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isCollapsed:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  closeMenu() {
+    this.isCollapsed = true;
   }
 
 }

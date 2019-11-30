@@ -1,14 +1,19 @@
-<h1>Listado de Posts</h1>
+<div class="container">
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>User Id</th>
-        <th>Acciones</th>
-    </tr>
-    <tr *ngFor="let post of posts">
-        <td>{{post.title}}</td>
-        <td>{{post.userId}}</td>
-        <td><a [routerLink]="post.id">Ver</a></td>
-    </tr>
-</table>
+    <h1>Listado de Posts</h1>
+    <a routerLink="new" class="btn btn-success float-right">New Post</a>
+    <table class="data-table">
+        <tr>
+            <th>Title</th>
+            <th>User Id</th>
+            <th>Acciones</th>
+        </tr>
+        <tr *ngFor="let post of posts">
+            <td>{{post.title}}</td>
+            <td>{{post.userId}}</td>
+            <td><a [routerLink]="post.id">
+                    <fa-icon [icon]="editIcon"></fa-icon>
+                    Ver</a></td>
+        </tr>
+    </table>
+</div>

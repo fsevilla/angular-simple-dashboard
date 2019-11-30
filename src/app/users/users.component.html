@@ -3,10 +3,19 @@
     <button>Add user</button>
 </form>
 
-
-<ul>
-    <li *ngFor="let user of usersList">
-        <a [routerLink]="user.id">{{user.name}}</a>
-        <!-- <a (click)="redirect(user.id)">{{user.name}}</a> -->
-    </li>
-</ul>
+<table class="data-table">
+    <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let user of usersList">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>
+            <a routerLink="user.id">Ver detalle</a>
+        </td>
+    </tr>
+</table>

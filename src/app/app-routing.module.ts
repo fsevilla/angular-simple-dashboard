@@ -6,6 +6,7 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { PostsComponent } from './posts/posts.component';
 import { HomeComponent } from './home/home.component';
 import { PostDetailsComponent } from './posts/post-details/post-details.component';
+import { NewPostComponent } from './posts/new-post/new-post.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'users/:id', component: UserDetailsComponent },
   { path: 'posts', component: PostsComponent },
+  { path: 'posts/new', component: NewPostComponent },
   { path: 'posts/:id', component: PostDetailsComponent },
   { path: '**', component: NotFoundComponent }
 ];

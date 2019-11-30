@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-
   constructor(private httpClient:HttpClient) { }
 
   getPosts():Promise<any> {
-    return this.httpClient.get(this.apiUrl).toPromise();
+    const url = environment.apiUrl + 'posts';
+    return this.httpClient.get(url).toPromise();
   }
 
   getPostDetails(id) {
-    return this.httpClient.get(this.apiUrl+'/'+id).toPromise();
+    return this.httpClient.get(environment.apiUrl+'posts/'+id).toPromise();
   }
 }
