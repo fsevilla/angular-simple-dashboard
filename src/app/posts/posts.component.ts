@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './post.service';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-posts',
@@ -9,6 +10,7 @@ import { PostService } from './post.service';
 export class PostsComponent implements OnInit {
 
   posts:Array<any>;
+  editIcon = faEdit;
 
   constructor(private postService: PostService) { }
 
