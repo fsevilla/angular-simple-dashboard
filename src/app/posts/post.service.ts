@@ -17,4 +17,9 @@ export class PostService {
   getPostDetails(id) {
     return this.httpClient.get(this.apiUrl+'/'+id).toPromise();
   }
+
+  getPostsByUser(userId) {
+    const url = 'https://jsonplaceholder.typicode.com/posts?userId='+userId;
+    return this.httpClient.get(url).toPromise();
+  }
 }

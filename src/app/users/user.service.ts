@@ -18,4 +18,9 @@ export class UserService {
     const url = this.apiUrl + '/' + id;
     return this.httpClient.get(url).toPromise();
   }
+
+  getUserPosts(userId) {
+    const url = `${this.apiUrl}/${userId}/posts`;
+    return this.httpClient.get(url).toPromise();
+  }
 }

@@ -1,3 +1,13 @@
 <h1>Detalles del usuario: {{user.name}}</h1>
 <h3 *ngIf="isLoading">cargando...</h3>
 <a routerLink="..">Regresar</a>
+
+<div>
+    <tabset #staticTabs>
+        <tab heading="Posts">
+            <app-user-posts></app-user-posts>
+        </tab>
+        <tab heading="ToDos">Static content 1</tab>
+        <tab heading="Albums">Static content 2</tab>
+    </tabset>
+</div>

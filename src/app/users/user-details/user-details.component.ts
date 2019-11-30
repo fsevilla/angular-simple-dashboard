@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TabsetComponent } from 'ngx-bootstrap';
 import { UserService } from '../user.service';
 
 @Component({
@@ -12,6 +13,8 @@ export class UserDetailsComponent implements OnInit {
   userId;
   user = {};
   isLoading = false;
+
+  @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -29,6 +32,10 @@ export class UserDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  selectTab(tabId: number) {
+    this.staticTabs.tabs[tabId].active = true;
   }
 
   getUserDetails() {

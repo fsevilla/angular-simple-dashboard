@@ -1,0 +1,16 @@
+<div class="container">
+        <table class="data-table">
+            <tr>
+                <th>Title</th>
+                <th>Acciones</th>
+            </tr>
+            <tr *ngFor="let post of posts">
+                <td>{{post.title}}</td>
+                <td>
+                    <a [routerLink]="'posts/'+post.id">
+                        editar
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
