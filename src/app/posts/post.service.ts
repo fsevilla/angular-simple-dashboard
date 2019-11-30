@@ -4,18 +4,17 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class PostService {
 
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+  apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private httpClient:HttpClient) { }
 
-  getUsers() {
+  getPosts():Promise<any> {
     return this.httpClient.get(this.apiUrl).toPromise();
   }
 
-  getUserDetails(id) {
-    const url = this.apiUrl + '/' + id;
-    return this.httpClient.get(url).toPromise();
+  getPostDetails(id) {
+    return this.httpClient.get(this.apiUrl+'/'+id).toPromise();
   }
 }

@@ -5,5 +5,8 @@
 
 
 <ul>
-    <li *ngFor="let user of usersList">{{user.name}}</li>
+    <li *ngFor="let user of usersList">
+        <a [routerLink]="user.id">{{user.name}}</a>
+        <!-- <a (click)="redirect(user.id)">{{user.name}}</a> -->
+    </li>
 </ul>

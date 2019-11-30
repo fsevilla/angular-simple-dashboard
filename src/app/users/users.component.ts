@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { UserService } from './user.service';
 
 @Component({
@@ -12,7 +14,11 @@ export class UsersComponent implements OnInit {
 
   usersList;
 
-  constructor(private userService:UserService) {}
+  constructor(
+    private userService:UserService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.getUsersList();
@@ -41,6 +47,12 @@ export class UsersComponent implements OnInit {
         .catch((err) => {
           console.error('Something failed: ', err);
         });
+  }
+
+  redirect(id) {
+    this.router.navigate([id], {
+      relativeTo: this.activatedRoute
+    });
   }
 
 }

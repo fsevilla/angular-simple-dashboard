@@ -1,0 +1,14 @@
+<h1>Listado de Posts</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>User Id</th>
+        <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let post of posts">
+        <td>{{post.title}}</td>
+        <td>{{post.userId}}</td>
+        <td><a [routerLink]="post.id">Ver</a></td>
+    </tr>
+</table>

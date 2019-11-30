@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PostsComponent } from './posts/posts.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { PostDetailsComponent } from './posts/post-details/post-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserDetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PostsComponent,
+    HomeComponent,
+    HeaderComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
